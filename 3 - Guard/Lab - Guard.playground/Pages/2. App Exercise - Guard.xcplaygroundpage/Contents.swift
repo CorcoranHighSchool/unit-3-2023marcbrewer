@@ -15,12 +15,12 @@ struct workout {
     var endTime: Double
 
 
-    init?(start: Double, end: Double) {
-    guard (end - start) < 10 else {
+    init?(startTime: Double, endTime: Double) {
+    guard (endTime - startTime) < 10 else {
         return nil
     }
-    startTime = start
-    endTime = end
+        self.startTime = startTime
+        self.endTime = endTime
     }
 }
 /*:
@@ -39,22 +39,21 @@ let caloriesTextField = UITextField()
 foodTextField.text = "Banana"
 caloriesTextField.text = "23"
 
-func logfood() -> Food?{
-    //make sure that there is text
-    guard let food = foodTextField.text, let calories = caloriesTextField.text
-    else{
+func logFood() -> (Food?) {
+    guard let food = foodTextField.text, let calories = caloriesTextField.text else {
         return nil
     }
-    //make sure that there is a vlaid number in calories
-    guard let numCalories = Int(calories) else{
+    guard let realCalories = Int(calories) else {
         return nil
     }
-    //return a food
-    return Food(name: food, calories: numCalories)
+    return Food(name: food, calories: realCalories)
 }
 //:  Call the function you made above and capture the return value. Unwrap the `Food` object with standard optional binding and print a statement about the food using each of its properties. Go back and change the text in `caloriesTextField` to a string that cannot be converted into a number. What happens in that case?
-
-
+var foodLogged = logFood()
+if let result = foodLogged {
+    print(result.name)
+    print(result.calories)
+}
 /*:
  _Copyright © 2021 Apple Inc._
 

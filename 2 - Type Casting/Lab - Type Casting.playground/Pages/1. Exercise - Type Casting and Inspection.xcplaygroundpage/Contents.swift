@@ -1,5 +1,7 @@
 
 
+// Excercise - Type Casting and Inspection
+
 //:  Loop through the collection. For each integer, print "The integer has a value of ", followed by the integer value. Repeat the steps for doubles, strings and booleans.
 var mystuff : [Any] = [5,20.17, "Cookies", true, true, 708, 78.1, "Parrots", "Blanket"]
 print (mystuff)
@@ -24,6 +26,8 @@ else if let boolean = item as? Bool{
     }
 }
 
+var dictionary:[String: Any] = ["First": 1.1, "Second": true, "Third": 3, "Fourth": "Four", "Fifth": false, "Sixth": "6"]
+print(dictionary)
 //:  Create a variable `total` of type `Double` set to 0. Then loop through the dictionary, and add the value of each integer and double to your variable's value. For each string value, add 1 to the total. For each boolean, add 2 to the total if the boolean is `true`, or subtract 3 if it's `false`. Print the value of `total`.
 var myLookup : [String : Any] = ["Age": 18, "Name" : "Sammy", "Cost" : 29.95,
 "True?" : false, "Ask Marc" : "I was trying to figure out why I have these errors", "Okay" : -0, "Are you sure" : true]
