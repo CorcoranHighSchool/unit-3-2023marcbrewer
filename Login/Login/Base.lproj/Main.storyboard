@@ -66,7 +66,7 @@
                         <outlet property="forgotPassword" destination="00e-Kz-Mef" id="Ftq-Lv-rCr"/>
                         <outlet property="forgotUsername" destination="tjb-pE-8Gr" id="CLm-6c-Q1v"/>
                         <outlet property="usernameTextField" destination="rhh-2z-Up5" id="wvY-1l-BQZ"/>
-                        <segue destination="739-xS-e24" kind="show" id="rrf-ga-iQY"/>
+                        <segue destination="739-xS-e24" kind="show" identifier="forgotUsernameOrPassword" id="rrf-ga-iQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +105,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQd-Ut-Wn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20.610687022900763" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="153" y="20"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
